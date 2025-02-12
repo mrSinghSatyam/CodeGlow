@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor UI</title>
+    <link rel="stylesheet" href="Assets/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <li><a href="./index.html">Home</a></li>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="./Docs.html">Docs</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <div>
+            <h1 class="codeglow">CodeGlow</h1>
+            <p class="p">🚀 "Code like a pro, style like an artist!"</p>
+        </div>
+        
+        <div class="container" id="container">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <select class="dropdown" id="themeSelector">
+                    <option value="nord">🌍 Nord</option>
+                    <option value="dark">🌙 Dark</option>
+                    <option value="light">☀️ Light</option>
+                </select>
+
+                <select class="dropdown" id="langSelector">
+                    <option value="cpp">🌐 C++</option>
+                    <option value="javascript">🟡 JavaScript</option>
+                    <option value="python">🔵 Python</option>
+                </select>
+
+                <input type="color" id="favcolor" value="#ff0000">
+                <button class="icon-btn" onclick="copyCode()">📋</button>
+                <button class="purple-btn" onclick="exportCodeAsImage()">Export</button>
+            </div>
+
+            <!-- Code Editor Box -->
+            <div class="code-box" id="code-box">
+                <pre id="pre"><code id="codeOutput" class="language-cpp" contenteditable="true">using namespace std;
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+    }</code></pre>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; All rights reserved | <span>@Satyam Singh</span></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="./code.js"></script>
+</body>
+</html>
